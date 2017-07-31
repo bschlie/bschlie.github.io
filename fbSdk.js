@@ -1,3 +1,9 @@
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+        statusChangeCallback(response);
+    });
+}
+
 window.fbAsyncInit = function() {
     FB.init({
         appId            : '1616846998350030',
