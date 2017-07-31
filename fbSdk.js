@@ -58,9 +58,6 @@ function loggedIn() {
             FB.logout(function (response) {
                 document.getElementById('status').innerHTML =
                     'You are not allowed to enter this site ';
-                FB.getLoginStatus(function (response) {
-                    statusChangeCallback(response);
-                });
             });
         }
 
