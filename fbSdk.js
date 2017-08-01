@@ -57,11 +57,17 @@ function loggedIn() {
         } else {
             FB.logout(function (response) {
                 document.getElementById('status').innerHTML =
-                    'You are not allowed to enter this site ';
+                    'You are not allowed to enter this site - Page will reload in 5 seconds';
+                window.setTimeout(timerTimeout, 5000);
             });
+
         }
 
     });
+}
+
+function timerTimeout() {
+    window.location.reload();
 }
 
 function notConnected() {
